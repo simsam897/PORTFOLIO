@@ -1,3 +1,6 @@
+
+import React from 'react'
+import './index.css'
 import { useState } from 'react'
 
 
@@ -6,7 +9,8 @@ function App() {
 
   return (
     <>
-      
+      <h1 className='text-red-500'>{count}</h1>
+      <button onClick={() => setCount((count) => count + 1)}>count</button>
     </>
   )
 }
