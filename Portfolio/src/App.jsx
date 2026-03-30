@@ -1,7 +1,8 @@
 
 import React from 'react'
-import './index.css'
+
 import { useState } from 'react'
+import { Header } from './componenets/Header.jsx'
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <h1 className='text-red-500'>{count}</h1>
       <button onClick={() => setCount((count) => count + 1)}>count</button>
     </>
