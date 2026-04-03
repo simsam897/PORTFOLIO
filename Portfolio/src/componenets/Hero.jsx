@@ -3,9 +3,9 @@ import React from 'react'
 const Hero = () => {
   return (
     <>
-      <section className="mx-auto w-full flex justify-center gap-16 bg-green-200 items-center animate-slide-from-left">
+      <section className="mx-auto overflow-auto p-10 w-full md:flex flex-col justify-center gap-16 bg-green-200 items-center animate-slide-from-left md:flex-row">
         {/* text-section */}
-        <div className="mb-6">
+        <div className="flex-col w-[50%S] justify-center items-center ">
           <div className="inline-flex h-6 w-6 items-center justify-center rounded border text-xs font-semibold mb-6">
             SS
           </div>
@@ -36,7 +36,7 @@ const Hero = () => {
         </div>
 
         {/* Profile Picture */}
-        <div className="mt-12 mb-6 flex justify-center ml-16">
+        <div className="mt-12 mb-6 md:flex w-[50%]  items-center justify-center ">
           <div className="h-64 w-64 rounded-3xl p-1 bg-gradient-to-b bg-green-400">
             <img
               src="Gemini_Generated_Image_h5maqfh5maqfh5ma.png"
