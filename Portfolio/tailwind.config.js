@@ -5,6 +5,8 @@ export default {
     extend: {
       screens: {
         "mobile-menu": "652px",
+        "skill-3xl":"1550px",
+
       },
       keyframes: {
         slideFromLeft: {

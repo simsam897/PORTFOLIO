@@ -81,7 +81,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className="bg-[#00684A] flex items-center justify-between px-14 py-2  w-full relative ">
+      <div className="bg-gradient-to-br from-[#00684A] to-green-400  flex items-center justify-between px-14 py-2  w-full relative ">
         {/* Logo - Left side */}
         <div className="flex-shrink-0  ml-14">
           <div className="font-bold font-weight-500 text-white border-2 p-1 rounded-md border-black mobile-menu:ml-16 bg-black">
