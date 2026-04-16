@@ -6,6 +6,7 @@ import { Header } from './componenets/Header.jsx'
 import Hero from './componenets/Hero.jsx'
 import About from './componenets/About.jsx'
 import Skills from './componenets/Skills.jsx'
+import Projects from './componenets/Projects.jsx'
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
 
     </>
   )
