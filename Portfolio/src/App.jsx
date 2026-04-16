@@ -8,6 +8,7 @@ import About from './componenets/About.jsx'
 import Skills from './componenets/Skills.jsx'
 import Projects from './componenets/Projects.jsx'
 import Education from './componenets/Education.jsx'
+import Contact from './componenets/Contact.jsx'
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Skills />
       <Projects />
       <Education />
+      <Contact />
 
     </>
   )
