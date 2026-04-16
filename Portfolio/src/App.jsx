@@ -1,20 +1,22 @@
 
 import React from 'react'
 
-import { useState } from 'react'
+
 import { Header } from './componenets/Header.jsx'
 import Hero from './componenets/Hero.jsx'
+import About from './componenets/About.jsx'
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
       <Header />
       <Hero />
-      <h1 className='text-red-500'>{count}</h1>
-      <button onClick={() => setCount((count) => count + 1)}>count</button>
+      <About />
+
     </>
   )
 }
