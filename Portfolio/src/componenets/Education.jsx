@@ -19,8 +19,8 @@ const EducationCard = ({ image, course, campus, cgpa, startYear, endYear }) => {
       {/* Course Details */}
       <div className="flex flex-col space-y-2 flex-grow">
         <div className="flex items-center space-x-2">
-          {/* <FaGraduationCap className="text-blue-400" /> */}
-          <span className="text-lg font-semibold">{course}</span>
+
+          <span className="md:text-lg text-sm font-semibold">{course}</span>
         </div>
         <div className="flex items-center space-x-2">
           <School className="text-green-400" />
@@ -33,14 +33,14 @@ const EducationCard = ({ image, course, campus, cgpa, startYear, endYear }) => {
         </div>
 
         {/* Progress Bar */}
-        <div className="mt-4">
-          <div className="flex justify-between text-xs text-gray-400 mb-1">
+        <div className="mt-4 ">
+          <div className="flex justify-between text-xs text-gray-400 ">
             <span>{startYear}</span>
             <span>{endYear}</span>
           </div>
           <div className="w-full bg-gray-700 h-2 rounded-full">
             <div
-              className="bg-blue-500 h-2 rounded-full transition-all duration-500"
+              className="bg-blue-500 h-2 rounded-full transition-all duration-500 mb-4"
               style={{ width: `${progress}%` }}
             ></div>
           </div>
