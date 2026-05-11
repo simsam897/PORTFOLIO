@@ -11,20 +11,27 @@ import Education from './componenets/Education.jsx'
 import Contact from './componenets/Contact.jsx'
 import Footer from './componenets/Footer.jsx'
 
-
+import { useRef } from 'react'
 
 function App() {
+  const contactRef = useRef(null)
+  const scrollToContact = () => {
+
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
 
   return (
     <>
-      <Header />
-      <Hero />
+      <Header scrollToContact={scrollToContact} />
+      <Hero scrollToContact={scrollToContact} />
       <About />
       <Skills />
       <Projects />
       <Education />
-      <Contact />
+      <Contact contactRef={contactRef} />
       <Footer />
 
     </>

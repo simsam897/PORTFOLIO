@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <>
       <section className="mx-auto overflow-auto p-10 w-full h-max md:flex flex-col justify-center items-center   gap-12 bg-gradient-to-tr from-[#46D87D] to-[#046E4D] animate-slide-from-left md:flex-row">
@@ -26,12 +26,9 @@ const Hero = () => {
             >
               View Projects
             </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center rounded-md border border-black px-4 py-2 text-white bg-black hover:bg-[#22C55E] hover:text-white"
-            >
-              Contact Me
-            </a>
+
+            <button className="inline-flex items-center rounded-md border border-[#001E2B] px-4 py-2 text-white bg-[#001E2B] hover:bg-[#22C55E] hover:text-white" onClick={props.scrollToContact}>Contact Me</button>
+
           </div>
         </div>
 
