@@ -3,19 +3,19 @@ import React from 'react'
 const Hero = () => {
   return (
     <>
-      <section className="mx-auto overflow-auto p-10 w-full md:flex flex-col justify-center gap-16 bg-green-200 items-center animate-slide-from-left md:flex-row">
+      <section className="mx-auto overflow-auto p-10 w-full h-max md:flex flex-col justify-center items-center   gap-12 bg-gradient-to-tr from-[#46D87D] to-[#046E4D] animate-slide-from-left md:flex-row">
         {/* text-section */}
-        <div className="flex-col w-[50%S] justify-center items-center ">
-          <div className="inline-flex h-6 w-6 items-center justify-center rounded border text-xs font-semibold mb-6">
+        <div className="flex flex-col w-[50%] justify-center  ml-40">
+          <div className="inline-flex h-6 w-6  items-center justify-center rounded border text-[#001E2B] text-xs font-semibold mb-6">
             SS
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#001E2B] tracking-tight">
             Simranjit Singh
           </h1>
-          <p className="mt-2 text-xl text-[#00684A] font-semibold">
+          <p className="mt-2 text-2xl text-white font-semibold ">
             Frontend Developer
           </p>
-          <p className="mt-4 text-slate-600">
+          <p className="mt-4 text-[#001E2B] font-bold">
             Building clean, interactive UIs with React & modern JavaScript.
           </p>
 
@@ -37,15 +37,16 @@ const Hero = () => {
 
         {/* Profile Picture */}
         <div className="mt-12 mb-6 md:flex w-[50%]  items-center justify-center ">
-          <div className="h-64 w-64 rounded-3xl p-1 bg-gradient-to-b bg-green-400">
+          <div className="h-64 w-64 rounded-3xl p-1 bg-gradient-to-b bg-green-400 flex justify-center items-center">
             <img
-              src="Gemini_Generated_Image_h5maqfh5maqfh5ma.png"
+              src="\src\assets\posture.png"
               alt="Avatar"
-              className="h-full w-full rounded-3xl object-cover scale-100"
+              className="h-[95%] w-[95%] rounded-3xl object-center scale-140"
             />
           </div>
         </div>
       </section>
+
     </>
   )
 }
