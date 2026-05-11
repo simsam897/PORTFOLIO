@@ -1,22 +1,52 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+const Contact = (props) => {
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
-const Contact = () => {
+
+
+
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(serviceId, templateId, form.current, {
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
   return (
 
 
     <>
-      <section className='  bg-gradient-to-br  from-[#00684A] to-green-400 overflow-auto pb-8 '>
+      <section className='  bg-gradient-to-br  from-[#00684A] to-green-400 overflow-auto pb-8  ' ref={props.contactRef}>
         <div className='pt-12 pb-6'>
           <h1 className='text-center font-semibold text-2xl text-white '>Contact Me </h1>
         </div>
 
 
 
-        <div className='w-[80%] h-600px flex flex-col xl:flex pt-10 justify-center items-center mx-auto gap-6   border-2 border-white/20 bg-white/20 backdrop-blur-3xl  shadow-[0_0_40px_rgba(0,255,150,0.3)]  z-10 overflow-auto '>
+        <div className='w-[80%] h-600px flex flex-col xl:flex pt-10 justify-center items-center mx-auto gap-6 glow-card  border-2 border-white/20 bg-white/20 backdrop-blur-3xl  shadow-[0_0_40px_rgba(0,255,150,0.3)]  z-10 overflow-hidden '>
 
           {/* contact form */}
-          <form action="
-        " className='flex-col border-2 p-8 rounded-lg flex  justify-center items-center w-[80%] md:w-[50%] h-[70%] gap-6   px-4  '>
+          <form ref={form}
+            onSubmit={sendEmail}
+            className='flex-col border-2 p-8 rounded-lg flex  justify-center items-center w-[80%] md:w-[50%] h-[70%] gap-6   px-4  '>
             <input
               type="text"
               placeholder="Name"
@@ -38,20 +68,20 @@ const Contact = () => {
             <button
               type="submit"
               value='Send'
-              className="px-6 py-3 self-center bg-blue-600  text-white font-medium rounded-md hover:bg-green-700 transition"
+              className="px-6 py-3 self-center bg-[#001E2B] text-white font-medium rounded-md hover:bg-[#05704E] transition"
             >
               Send Message
             </button>
           </form>
 
 
-<hr className='bg-black w-full' />
+          <hr className='bg-black w-full' />
           {/* other options  */}
 
           <div className='  sm:w-[70%]  h-[70%]  flex flex-row  justify-center gap-4 items-center overflow-auto   p-4 '>
-            <button className='  sm:w-[200px] md:h-[70px] border-2 border-white text-white bg-black md:text-lg font-semibold text-sm rounded-lg shadow-xl p-3 overflow-auto'>GitHub</button>
-            <button className='  sm:w-[200px] md:h-[70px] border-2 text-sm border-white text-white bg-black md:text-lg rounded-lg font-semibold shadow-xl p-3'>LinkedIn</button>
-            <button className='  sm:w-[200px] md:h-[70px] text-sm border-2 border-white text-white bg-black md:text-lg rounded-lg font-semibold shadow-xl p-3  '>Gmail</button>
+            <a href="https://github.com/simsam897">   <button className='  sm:w-[200px] md:h-[70px] border-2 border-white text-white bg-[#001E2B] md:text-lg font-semibold text-sm rounded-lg shadow-xl p-3 overflow-auto hover:bg-[#05704E]'>GitHub</button></a>
+            <a href="https://www.linkedin.com/in/simranjit-singh-944705232">   <button className='  sm:w-[200px] md:h-[70px] border-2 text-sm border-white text-white bg-[#001E2B] md:text-lg rounded-lg font-semibold shadow-xl p-3 hover:bg-[#05704E]'>Linkedin</button></a>
+            <a href="mailto:simranjitsinghwebdev@outlook.com"> <button className='  sm:w-[200px] md:h-[70px] text-sm border-2 border-white text-white bg-[#001E2B] md:text-lg rounded-lg font-semibold shadow-xl p-3 hover:bg-[#05704E]'>Gmail</button></a>
           </div>
           <div className=''></div>
         </div>
