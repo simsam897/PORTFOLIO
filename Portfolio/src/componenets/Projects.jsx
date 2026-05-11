@@ -1,26 +1,29 @@
 import React from "react";
+import portfolioImg from "../assets/portfolio.png"
+import weatherApp from "../assets/weatherApp.png"
+import MovieSearch from "../assets/MovieSearch.png"
 
 const projects = [
   {
     title: "Portfolio Website",
     description:
       "A personal portfolio built with React and Tailwind CSS showcasing projects , my education details , expericence and contact me with multiple ways.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiJGddJ1Z_ixOzZa9q11y483VyRGQ6toS6EA&s",
-    link: "#",
+    image: portfolioImg,
+    link: "#https://portfolio-1-7tv1.onrender.com",
   },
   {
-    title: "Blog site",
+    title: "WeatherApp",
     description:
-      "This Blog site platform userful in createing blog  easily by user and admin . Admin can delete any user or post",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiJGddJ1Z_ixOzZa9q11y483VyRGQ6toS6EA&s",
-    link: "#",
+      "A weather application built using WeatherAPI that allows users to enter a city name and instantly view real-time weather details such as temperature, humidity, and conditions.",
+    image: weatherApp,
+    link: "#https://weatherapplication-pasp.onrender.com/",
   },
   {
-    title: "Library management system",
+    title: "MovieSearchAPP",
     description:
-      "RLinrary managment system which usefull to mange main tasks that are performed by librarian like adding new book , delete book , add new member , delete user and user can perform tasks like search a book  , borrow  a book .",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiJGddJ1Z_ixOzZa9q11y483VyRGQ6toS6EA&s",
-    link: "#",
+      "A simple and interactive movie search application that allows users to find detailed information about movies using an external API",
+    image: MovieSearch,
+    link: "https://moviesearchapp-3fak.onrender.com/",
   },
 ];
 
@@ -40,27 +43,27 @@ const Projects = () => {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 backdrop-blur-lg bg-white/20 border-2 border-white/10 rounded-sm">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 bg-[#001E2B]/60 backdrop-blur-lg border-2 shadow-lg border-white/20 rounded-sm">
           {projects.map((project, index) => (
             <div
               key={index}
-              className=" border-1 rounded-xl bg-green-200 p-2 m-4 overflow-hidden "
+              className=" border-1 rounded-xl bg-[#DCFCE7] p-2 m-4 overflow-hidden z-1 "
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover bg-white border-2 bordre-black "
+                className="w-full h-48 object-center text-[#001E2B] bg-white border-2 border-black rounded-md "
               />
               <div className="p-6 ">
-                <h3 className="text-xl font-semibold   mb-2">
+                <h3 className="text-xl font-semibold  text-[#001E2B] mb-2">
                   {project.title}
                 </h3>
-                <p className=" mb-4">
+                <p className=" text-[#001E2B] mb-4">
                   {project.description}
                 </p>
                 <a
                   href={project.link}
-                  className="inline-block px-4 py-2 bg-green-400 text-white rounded-lg hover:bg-green-700 transition"
+                  className="inline-block px-4 py-2 bg-[#001E2B] text-white rounded-lg hover:bg-[#05704E] hover:text-[#001E2B] transition"
                 >
                   View Project
                 </a>
