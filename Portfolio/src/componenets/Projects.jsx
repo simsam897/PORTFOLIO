@@ -9,14 +9,14 @@ const projects = [
     description:
       "A personal portfolio built with React and Tailwind CSS showcasing projects , my education details , expericence and contact me with multiple ways.",
     image: portfolioImg,
-    link: "#https://portfolio-1-7tv1.onrender.com",
+    link: "https://portfolio-1-7tv1.onrender.com",
   },
   {
     title: "WeatherApp",
     description:
       "A weather application built using WeatherAPI that allows users to enter a city name and instantly view real-time weather details such as temperature, humidity, and conditions.",
     image: weatherApp,
-    link: "#https://weatherapplication-pasp.onrender.com/",
+    link: "https://weatherapplication-pasp.onrender.com/",
   },
   {
     title: "MovieSearchAPP",
