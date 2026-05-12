@@ -73,11 +73,11 @@ const Skills = () => {
         </div>
 
         {/* Tools Section */}
-        <div className="mt-8 w-full flex justify-center p-4">
-          <div className="w-[1000px] sm:w-[90%] md:w-[70%] h-[130px] flex flex-row justify-center items-center gap-4 bg-gradient-to-br from-[#046E4D] to-[#46D87D]  border border-white rounded-md shadow-lg overflow-x-auto">
+        <div className="mt-8 w-full flex justify-center ">
+          <div className="w-full sm:w-[90%] md:w-[450px] h-[130px] flex flex-row justify-center items-center gap-4 bg-gradient-to-br from-[#046E4D] to-[#46D87D]  border border-white rounded-md px-2 shadow-lg overflow-x-auto">
 
             {tools.map((img, i) => (
-              <div key={i} className="w-[75px] sm:w-[80px] h-[70px] sm:h-[80px] border border-white rounded-md hover:scale-110 transition">
+              <div key={i} className="w-[65px] sm:w-[80px] h-[70px] sm:h-[80px] border border-white rounded-md hover:scale-110 transition ">
 
                 <img src={img} alt={`tools-${i}`} className="w-full h-full object-center p-2 bg-white" loading="lazy" />
               </div>
