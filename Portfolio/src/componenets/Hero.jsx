@@ -119,11 +119,11 @@
 
 
 import React from "react";
+import myImage from "../assets/posture.png"
 
 const Hero = (props) => {
   return (
-    <section className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 md:px-14 py-10 gap-10 bg-gradient-to-tr from-[#46D87D] to-[#046E4D]">
-
+    <section className="w-full flex flex-col lg:flex-row items-center justify-center px-6 md:px-14 py-16 md:py-20 lg:py-24 gap-10 bg-gradient-to-tr from-[#46D87D] to-[#046E4D]">
       {/* TEXT SECTION */}
       <div className="w-full lg:w-1/2 max-w-xl mx-auto flex flex-col items-start text-left">
 
@@ -164,7 +164,7 @@ const Hero = (props) => {
       <div className="w-full lg:w-1/2 flex justify-center items-center">
         <div className="h-64 w-64 md:h-72 md:w-72 rounded-3xl p-1 bg-green-400 flex justify-center items-center shadow-lg">
           <img
-            src="src\assets\posture.png"
+            src={myImage}
             alt="Avatar"
             className="h-full w-full rounded-3xl object-cover"
           />
