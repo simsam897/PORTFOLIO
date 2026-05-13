@@ -78,10 +78,50 @@ const Contact = (props) => {
           <hr className='bg-black w-full' />
           {/* other options  */}
 
-          <div className='  sm:w-[70%]  h-[70%]  flex flex-row  justify-center gap-4 items-center overflow-auto   p-4 '>
-            <a href="https://github.com/simsam897">   <button className='  sm:w-[200px] md:h-[70px] border-2 border-white text-white bg-[#001E2B] md:text-lg font-semibold text-sm rounded-lg shadow-xl p-3 overflow-auto hover:bg-[#05704E]'>GitHub</button></a>
-            <a href="https://www.linkedin.com/in/simranjit-singh-944705232">   <button className='  sm:w-[200px] md:h-[70px] border-2 text-sm border-white text-white bg-[#001E2B] md:text-lg rounded-lg font-semibold shadow-xl p-3 hover:bg-[#05704E]'>Linkedin</button></a>
-            <a href="mailto:simranjitsinghwebdev@outlook.com"> <button className='  sm:w-[200px] md:h-[70px] text-sm border-2 border-white text-white bg-[#001E2B] md:text-lg rounded-lg font-semibold shadow-xl p-3 hover:bg-[#05704E]'>Gmail</button></a>
+          <div className="w-full sm:w-[70%] flex flex-wrap justify-center gap-4 items-center p-4">
+
+            <a href="https://github.com/simsam897" target="_blank" rel="noopener noreferrer">
+              <button className="
+      w-[140px] sm:w-[160px] md:w-[180px]
+      text-sm sm:text-base
+      px-4 py-2 sm:px-5 sm:py-2.5
+      border-2 border-white
+      text-white bg-[#001E2B]
+      rounded-lg font-semibold shadow-lg
+      hover:bg-[#05704E] transition duration-200
+    ">
+                GitHub
+              </button>
+            </a>
+
+            <a href="https://www.linkedin.com/in/simranjit-singh-944705232" target="_blank" rel="noopener noreferrer">
+              <button className="
+      w-[140px] sm:w-[160px] md:w-[180px]
+      text-sm sm:text-base
+      px-4 py-2 sm:px-5 sm:py-2.5
+      border-2 border-white
+      text-white bg-[#001E2B]
+      rounded-lg font-semibold shadow-lg
+      hover:bg-[#05704E] transition duration-200
+    ">
+                LinkedIn
+              </button>
+            </a>
+
+            <a href="mailto:simranjitsinghwebdev@outlook.com">
+              <button className="
+      w-[140px] sm:w-[160px] md:w-[180px]
+      text-sm sm:text-base
+      px-4 py-2 sm:px-5 sm:py-2.5
+      border-2 border-white
+      text-white bg-[#001E2B]
+      rounded-lg font-semibold shadow-lg
+      hover:bg-[#05704E] transition duration-200
+    ">
+                Gmail
+              </button>
+            </a>
+
           </div>
           <div className=''></div>
         </div>
