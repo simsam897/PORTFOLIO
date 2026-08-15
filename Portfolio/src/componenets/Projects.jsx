@@ -1,9 +1,18 @@
 import React from "react";
-import portfolioImg from "../assets/portfolio.png"
-import weatherApp from "../assets/weatherApp.png"
-import MovieSearch from "../assets/MovieSearch.png"
+import portfolioImg from "../assets/portfolio.png";
+import weatherApp from "../assets/weatherApp.png";
+import MovieSearch from "../assets/MovieSearch.png";
+import todoImage from "../assets/todoapp.jpg";
 
 const projects = [
+  {
+    title: "Todo With MERN",
+    description:
+      "A full-stack MERN Todo app with secure authentication, task management, completion tracking, and history. Built with React.js, Node.js, Express.js, MongoDB, JWT cookies, and Cloudinary, deployed on Vercel and Render.",
+    image: todoImage,
+    link: "https://todo-with-mern-gold.vercel.app/",
+  },
+
   {
     title: "Portfolio Website",
     description:
@@ -18,18 +27,14 @@ const projects = [
     image: weatherApp,
     link: "https://weatherapplication-pasp.onrender.com/",
   },
-  {
-    title: "MovieSearchAPP",
-    description:
-      "A simple and interactive movie search application that allows users to find detailed information about movies using an external API",
-    image: MovieSearch,
-    link: "https://moviesearchapp-3fak.onrender.com/",
-  },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-gradient-to-br from-[#00684A] to-green-400  border-2 border-white  py-20">
+    <section
+      id="projects"
+      className="bg-gradient-to-br from-[#00684A] to-green-400  border-2 border-white  py-20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12 ">
@@ -58,9 +63,7 @@ const Projects = () => {
                 <h3 className="text-xl font-semibold  text-[#001E2B] mb-2">
                   {project.title}
                 </h3>
-                <p className=" text-[#001E2B] mb-4">
-                  {project.description}
-                </p>
+                <p className=" text-[#001E2B] mb-4">{project.description}</p>
                 <a
                   href={project.link}
                   className="inline-block px-4 py-2 bg-[#001E2B] text-white rounded-lg hover:bg-[#05704E] hover:text-[#001E2B] transition"
